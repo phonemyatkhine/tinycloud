@@ -64,6 +64,13 @@ return [
             'url' => env('AWS_URL'),
             'endpoint' => env('AWS_ENDPOINT'),
         ],
+        'ftp' => [
+            'driver' => 'ftp',
+            'host' => '127.0.0.1',
+            'username' => 'ftpuser',
+            'password' => 'password',
+            'port' => '420',
+        ]
 
     ],
 
@@ -80,6 +87,9 @@ return [
 
     'links' => [
         public_path('storage') => storage_path('app/public'),
+        public_path('ftp_server1') => storage_path('app/ftp_server1'),
+        public_path('ftp_server2') => storage_path('app/ftp_server2'),
+
     ],
 
 ];
